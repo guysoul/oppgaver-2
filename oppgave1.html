@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let btn = document.createElement("button");
+      btn.innerText = "Trykk her";
+
+      btn.addEventListener("click", addStyling);
+
+      function addStyling() {
+        btn.innerText = "Jeg ble trykket på!";
+        btn.style.backgroundColor = "green";
+      }
+
+      document.body.append(btn);
+    </script>
+  </body>
+</html>
