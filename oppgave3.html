@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oppgave 3</title>
+  </head>
+  <body>
+    <button id="up-btn">^</button>
+    <button id="left-btn"><--</button>
+    <button id="right-btn">--></button>
+    <button id="down-btn">v</button>
+
+    <script>
+      let upBtn = document.getElementById("up-btn");
+      let leftBtn = document.getElementById("left-btn");
+      let rightBtn = document.getElementById("right-btn");
+      let downBtn = document.getElementById("down-btn");
+
+      document.body.addEventListener("keyup", function (x) {
+        if (x.code === "ArrowLeft") {
+          leftBtn.style.backgroundColor = "Green";
+          upBtn.style.backgroundColor = "";
+          rightBtn.style.backgroundColor = "";
+          downBtn.style.backgroundColor = "";
+        } else if (x.code === "ArrowUp") {
+          upBtn.style.backgroundColor = "green";
+          downBtn.style.backgroundColor = "";
+          rightBtn.style.backgroundColor = "";
+          leftBtn.style.backgroundColor = "";
+        } else if (x.code === "ArrowDown") {
+          downBtn.style.backgroundColor = "green";
+          upBtn.style.backgroundColor = "";
+          rightBtn.style.backgroundColor = "";
+          leftBtn.style.backgroundColor = "";
+        } else if (x.code === "ArrowRight") {
+          rightBtn.style.backgroundColor = "green";
+          upBtn.style.backgroundColor = "";
+          downBtn.style.backgroundColor = "";
+          leftBtn.style.backgroundColor = "";
+        }
+      });
+    </script>
+  </body>
+</html>
